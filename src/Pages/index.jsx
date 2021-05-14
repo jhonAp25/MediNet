@@ -9,7 +9,7 @@ const Index = () => {
    
 
   const irRegistrarse = () => {
-    
+
     alert("Hola");
     console.log('hola');
   };
@@ -20,7 +20,7 @@ const Index = () => {
         <h1 className="text-5xl text-gray-100  font-bold">Hola, amigo!</h1>
         <h1 className="text-3xl w-4/5 text-gray-100  text-center font-light">
           {" "}
-          Ingrese sus datos personales y comience su viaje con nosotros
+          Ingrese sus datos personales y comience su viaje con nosotros.
         </h1>
         <div  className="flex flex-col w-4/5  loginAccion items-center justify-between">
           <button
