@@ -12,6 +12,14 @@
     background-size: cover;
     background-position: center;
 }
+.cardLeft{
+    transition: transform 900ms;
+    transform: translateX(0%);
+}
+.cardRigth{
+    transition: transform 900ms;
+    transform: translateX(100%);
+}
 .subTitle{
     margin-bottom: 0.4rem;
     color:  #006d68;;
@@ -46,3 +54,30 @@
 .loginAccion{
     margin-top: 4% !important;
 }
+
+/***********************************ERRORES*****************************************/
+.error{  
+    transition: opacity  800ms;
+    animation:errores 1000ms;
+    animation-iteration-count: 1;
+
+}
+@keyframes errores{
+    0%{ transform: scale(0.8);}
+    50%{  transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+
+/********************REGISTROO NEW **************************/
+
+.active{
+    display: flex;
+ 
+}
+.inactive{
+    display: none;
+   
+}
+
+
+

@@ -1,39 +1,46 @@
 import React,{useState} from "react";
 import Login from "../Components/Login";
 import "../Assets/App.css";
+import Presentacion from "../Components/Presentacion";
+import RegistroNew from "../Components/RegistroNew";
 
 
 
 
 const Index = () => {
+
+  
+  const [classMove , setClassMove]=useState("cardLeft")
+  const [btnAccion , setBtnAccion]=useState(true)
+  const [activeForm , setActiveForm]=useState(true)
    
 
   const irRegistrarse = () => {
+    setClassMove("cardRigth")
+    setBtnAccion(!btnAccion)
+    setActiveForm(!activeForm)
 
-    alert("Hola");
-    console.log('hola');
+  
   };
+  const irLogin = () => {
+    setClassMove("cardLeft")
+    setBtnAccion(!btnAccion)
+    setActiveForm(!activeForm)
+
+  
+  };
+
+ 
 
   return (
     <div className="index">
-      <div className="imgPresentacion flex flex-col justify-center items-center  space-y-10">
-        <h1 className="text-5xl text-gray-100  font-bold">Hola, amigo!</h1>
-        <h1 className="text-3xl w-4/5 text-gray-100  text-center font-light">
-          {" "}
-          Ingrese sus datos personales y comience su viaje con nosotros.
-        </h1>
-        <div  className="flex flex-col w-4/5  loginAccion items-center justify-between">
-          <button
-            onClick={irRegistrarse}
-            
-            
-            className="p-3 w-2/5 btnRegistrarse  text-sm font-semibold tracking-widest rounded-full bg-red-200"
-          >
-            REGISTRARSE
-          </button>
-        </div>
-      </div>
-      <Login></Login>
+      
+      <Login activeForm={activeForm} />
+      <Presentacion  irRegistrarse={irRegistrarse} irLogin={irLogin} btnAccion={btnAccion} classMove={classMove} />
+      <RegistroNew  activeForm={activeForm} />
+
+      
+      
     </div>
   );
 }
