@@ -16,17 +16,21 @@ const Index = () => {
    
 
   const irRegistrarse = () => {
-    setClassMove("cardRigth")
+   setClassMove("cardRigth")
     setBtnAccion(!btnAccion)
-    setActiveForm(!activeForm)
+ 
+      setActiveForm(!activeForm)
+  
 
+
+     
   
   };
   const irLogin = () => {
+    setActiveForm(!activeForm)
+  
     setClassMove("cardLeft")
     setBtnAccion(!btnAccion)
-    setActiveForm(!activeForm)
-
   
   };
 
@@ -34,10 +38,10 @@ const Index = () => {
 
   return (
     <div className="index">
-      
-      <Login activeForm={activeForm} />
-      <Presentacion  irRegistrarse={irRegistrarse} irLogin={irLogin} btnAccion={btnAccion} classMove={classMove} />
+
       <RegistroNew  activeForm={activeForm} />
+      <Presentacion  irRegistrarse={irRegistrarse} irLogin={irLogin} btnAccion={btnAccion} classMove={classMove} />   
+      <Login activeForm={activeForm} />
 
       
       

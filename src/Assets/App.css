@@ -1,8 +1,14 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
 
 .index{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    transition: all 800;
 
 }
 .imgPresentacion{
@@ -11,6 +17,7 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
+    position: absolute;
 }
 .cardLeft{
     transition: transform 900ms;
@@ -71,13 +78,26 @@
 /********************REGISTROO NEW **************************/
 
 .active{
-    display: flex;
+    opacity: 1;
  
 }
 .inactive{
-    display: none;
    
+    
+    opacity: 0;
+    z-index: -100;
 }
+.width5{
+    width: 48%;
+}
+.width8{width: 61%;}
+.width4{width: 35%;}
 
+/****************FORMULARIO REGSITRO***************/
 
-
+.label-formRegi{
+    color: #59737B;
+}
+.inputForm{
+    background-color: #ececec;
+}
